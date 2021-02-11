@@ -1,12 +1,13 @@
-#' @import(reactable)
-#' @import(rtweet)
-#' @import(shiny)
-#' @import(dplyr)
-#' @import(glue)
-#' @import(purrr)
-#' @import(wordcloud2)
-#' @import(tm)
-#' @import(qdap)
+#' @import reactable
+#' @import rtweet
+#' @import shiny
+#' @import dplyr
+#' @import glue
+#' @import purrr 
+#' @import wordcloud2 
+#' @import tm
+#' @import qdap
+
 
 #### function to make URL clickable ####
 make_url_html <- function(url) {
