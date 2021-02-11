@@ -33,7 +33,7 @@ ui <- fluidPage(
     # Show results
     mainPanel(
       tabsetPanel(type = "tabs",
-                  tabPanel("Tabla", reactableOutput("tweet_table")),
+                  tabPanel("Tabla", reactable::reactableOutput("tweet_table")),
                   tabPanel("Tweets/tiempo",
                            sidebarPanel(selectInput("time_unit", label = h3("Unidad de Tiempo"),
                                                     choices = list("Segundos" = "seconds", "Minutos" = "minutes", "Horas" = "hours", "Dias" = "days"),
