@@ -1,6 +1,6 @@
 
 #' @import shiny
-
+#' @import reactable
 
 library(shiny)
 
