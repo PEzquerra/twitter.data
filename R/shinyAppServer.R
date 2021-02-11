@@ -80,7 +80,7 @@ shinyAppServer <- function(input, output) {
   )
 
 
-  output$cloud <- wordcloud::renderWordcloud2({
+  output$cloud <- wordcloud2::renderWordcloud2({
     req(tweet_df())
     tweet_df()$text %>%
       rm_twitter_url() %>%
