@@ -34,7 +34,7 @@ cbind_dplyr <- function(x) {
 shinyAppServer <- function(input, output) {
 
   tweet_df <- eventReactive(input$get_data, {
-    search_tweets(input$hashtag_to_search, n = input$num_tweets_to_download, include_rts = input$rt, lang = "es")
+    rtweet::search_tweets(input$hashtag_to_search, n = input$num_tweets_to_download, include_rts = input$rt, lang = "es")
   })
 
   output$plot <- renderPlot({
