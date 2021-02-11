@@ -3,7 +3,7 @@ import(rtweet)
 import(dplyr)
 import(glue)
 import(purrr)
-import(wordcloud)
+import(wordcloud2)
 import(tm)
 import(qdap)
 
