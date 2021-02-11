@@ -6,7 +6,7 @@
 library(shiny)
 
 
-ui <- fluidPage(
+shinyAppUI <- fluidPage(
 
   # Application title
   titlePanel("Explorador de tweets"),
