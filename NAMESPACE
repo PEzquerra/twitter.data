@@ -1,3 +1,10 @@
-importFrom(magrittr,"%>%")
+import(reactable)
+import(rtweet)
+import(dplyr)
+import(glue)
+import(purr)
+import(wordcloud)
+import(tm)
+import(qdap)
 
 exportPattern("^[[:alpha:]]+")
