@@ -1,6 +1,7 @@
 
 #' @import shiny
 #' @import reactable
+#' @import wordcloud2
 
 library(shiny)
 
@@ -45,7 +46,7 @@ ui <- fluidPage(
                            ),
                            plotOutput("plot")),
                   tabPanel("Nube de Palabras",
-                           wordcloud2Output("cloud")),
+                           wordcloud2::wordcloud2Output("cloud")),
                   tabPanel("Sentimientos",
                            plotOutput("sentiment"))
       )
