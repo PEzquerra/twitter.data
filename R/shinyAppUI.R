@@ -8,6 +8,7 @@
 #' @import tm
 #' @import qdap
 
+library(shiny)
 
 #### function to make URL clickable ####
 make_url_html <- function(url) {
