@@ -1,4 +1,13 @@
 # Define server logic
+#' @import reactable
+#' @import rtweet
+#' @import dplyr
+#' @import glue
+#' @import purrr 
+#' @import wordcloud2 
+#' @import tm
+#' @import qdap
+
 shinyAppServer <- function(input, output) {
 
   tweet_df <- eventReactive(input$get_data, {
