@@ -7,6 +7,7 @@
 #' @import wordcloud2 
 #' @import tm
 #' @import qdap
+#' @import syuzhet
 
 #### function to make URL clickable ####
 make_url_html <- function(url) {
@@ -98,7 +99,7 @@ shinyAppServer <- function(input, output) {
   output$sentiment <- renderPlot({
     req(tweet_df())
     tweet_df()$text %>%
-      get_nrc_sentiment(language = "spanish") %>%
+      syuzhet::get_nrc_sentiment(language = "spanish") %>%
       column_sum() %>%
       data.frame() %>%
       cbind_dplyr() %>%
