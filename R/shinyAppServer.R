@@ -83,7 +83,7 @@ shinyAppServer <- function(input, output) {
   output$cloud <- wordcloud2::renderWordcloud2({
     req(tweet_df())
     tweet_df()$text %>%
-      rm_twitter_url() %>%
+      qdapRegex::rm_twitter_url() %>%
       iconv(from = 'UTF-8', to = 'ASCII//TRANSLIT') %>%
       VectorSource() %>%
       Corpus() %>%
