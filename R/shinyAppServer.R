@@ -55,7 +55,7 @@ shinyAppServer <- function(input, output) {
       select(DateTime = created_at, User = screen_name, Tweet, Likes = favorite_count, RTs = retweet_count, URLs)
   })
 
-  output$tweet_table <- renderReactable({
+  output$tweet_table <- reactable::renderReactable({
     reactable::reactable(tweet_table_data(),
                          filterable = TRUE, searchable = TRUE, bordered = TRUE, striped = TRUE, highlight = TRUE,
                          showSortable = TRUE, defaultSortOrder = "desc", defaultPageSize = 25, showPageSizeOptions = TRUE, pageSizeOptions = c(25, 50, 75, 100, 200),
@@ -80,7 +80,7 @@ shinyAppServer <- function(input, output) {
   )
 
 
-  output$cloud <- renderWordcloud2({
+  output$cloud <- wordcloud::renderWordcloud2({
     req(tweet_df())
     tweet_df()$text %>%
       rm_twitter_url() %>%
